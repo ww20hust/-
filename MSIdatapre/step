@@ -1,3 +1,7 @@
 step 1
 data_read:
-
+install.packages(c("MALDIquant", "MALDIquantForeign"))
+library("MALDIquant")
+library("MALDIquantForeign")
+exampleDir <- system.file("exampledata",package = "MALDIquantForeign")
+spectra = import(file.path(exampleDir,"tiny_continuous.imzML"))
